@@ -25,13 +25,18 @@ public class Parqueadero {
 	}
 	
 	public String darHoraInicio() {
+		
+		horaInicio   = (int)(7+Math.random()*5);
+		minutoInicio = (int)(Math.random()*60);
+
 		return horaInicio+":"+minutoInicio;
 	}
 	
 	public void marcarHoraFinal() {
 		// To modify:
-		horaInicio   = 12;
-		minutoInicio = 0;
+		horaInicio   = (int)(12+Math.random()*10);
+		minutoInicio = (int)(Math.random()*60);
+
 	}
 	
 	public String darHoraFinal() {
