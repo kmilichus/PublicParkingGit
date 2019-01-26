@@ -16,6 +16,7 @@ public class ParqueoPublico extends Application {
          Scene scene = new Scene(root); // attach scene graph to scene
          // To add a line
          stage.setScene(scene); // attach scene to stage
+         stage.setTitle("Parqueo público");
          stage.show(); // display the stage
       }
 

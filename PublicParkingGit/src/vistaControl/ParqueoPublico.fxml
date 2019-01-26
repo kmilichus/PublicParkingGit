@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="vistaControl.ParqueoPublicoController">
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vistaControl.ParqueoPublicoController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -33,5 +33,16 @@
       <TextField fx:id="valorAPagarTextField" editable="false" focusTraversable="false" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
 		<!-- To add lines -->
       <Label text="Valor a Pagar" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+      <Label fx:id="vehiculo" prefHeight="17.0" prefWidth="72.0" text="Vehiculo">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="hInicial" layoutX="10.0" layoutY="17.0" text="Hora  de Inicio" GridPane.columnIndex="1" />
+      <Label fx:id="hFinal" layoutX="110.0" layoutY="17.0" text="Hora Final" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </GridPane>

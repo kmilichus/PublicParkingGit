@@ -3,6 +3,7 @@ package vistaControl;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 
@@ -35,6 +36,16 @@ public class ParqueoPublicoController {
     @FXML
     private TextField valorAPagarTextField;
     
+    @FXML
+    private Label vehiculo;
+    
+    @FXML
+    private Label hInicial;
+    
+    @FXML
+    private Label hFinal;
+    
+    
     private Parqueadero parqueoPublico;
         
     // called by FXMLLoader to initialize the controller
@@ -64,6 +75,6 @@ public class ParqueoPublicoController {
     	horaFinalTextField.setText(horaFinal);
     	double valorAPagar = parqueoPublico.calcularValorAPagar();
     	// To modify line
-    	valorAPagarTextField.setText(valorAPagar+"");
+    	valorAPagarTextField.setText(CURRENCY.format(valorAPagar));
     }    
 }
