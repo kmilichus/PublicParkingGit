@@ -17,6 +17,7 @@ public class ParqueoPublico extends Application {
          // To add a line
          stage.setScene(scene); // attach scene to stage
          stage.show(); // display the stage
+         stage.setTitle("Parqueo Público");
       }
 
       public static void main(String[] args) {
