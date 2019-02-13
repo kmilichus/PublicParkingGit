@@ -12,6 +12,7 @@ public class ParqueoPublico extends Application {
       public void start(Stage stage) throws Exception{
          Parent root =
             FXMLLoader.load(getClass().getResource("ParqueoPublico.fxml"));
+         stage.setTitle(" Parqueo Público");
 
          Scene scene = new Scene(root); // attach scene graph to scene
          // To add a line
@@ -23,3 +24,4 @@ public class ParqueoPublico extends Application {
          launch(args);
       }
 }
+	

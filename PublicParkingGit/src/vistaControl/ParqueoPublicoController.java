@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 
 import java.math.RoundingMode;
 import java.text.NumberFormat;
+import java.util.Locale;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -64,6 +65,11 @@ public class ParqueoPublicoController {
     	horaFinalTextField.setText(horaFinal);
     	double valorAPagar = parqueoPublico.calcularValorAPagar();
     	// To modify line
-    	valorAPagarTextField.setText(valorAPagar+"");
+    	
+    	Locale español = new Locale("es");
+    	NumberFormat formatoImporte = NumberFormat.getCurrencyInstance();
+    	
+    	
+    	valorAPagarTextField.setText(formatoImporte.format(valorAPagar));
     }    
 }

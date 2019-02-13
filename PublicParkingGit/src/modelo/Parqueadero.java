@@ -18,10 +18,18 @@ public class Parqueadero {
 	}
 	
 	public void marcarHoraInicio(String tipoV) {
-		tipoVehiculo = tipoV;
-		// To modify:
-		horaInicio   = 7;
-		minutoInicio = 0;
+		int [] horas = {7,8,9,10,11,12};
+		int valor = 59;
+		double minuto = Math.random();
+		double hora = Math.random();
+		
+		double random = hora*5;
+		double random2 = minuto*valor;
+		
+		int hora1 = horas[(int)random];
+		int minuto1 = (int) random2; 
+		horaInicio = hora1;
+		minutoInicio =minuto1;
 	}
 	
 	public String darHoraInicio() {
@@ -30,8 +38,18 @@ public class Parqueadero {
 	
 	public void marcarHoraFinal() {
 		// To modify:
-		horaInicio   = 12;
-		minutoInicio = 0;
+		
+		int [] horas = {12,13,14,15,16,17,18,19,20,21};
+		int valor = 59;
+		double minuto = Math.random();
+		double hora = Math.random();
+		double random = hora*9;
+		double random2 = minuto*valor;
+		
+		int hora1 = horas[(int)random];
+		int minuto1 = (int) random2; 
+		horaInicio = hora1;
+		minutoInicio =minuto1;
 	}
 	
 	public String darHoraFinal() {
@@ -39,6 +57,8 @@ public class Parqueadero {
 	}
 	
 	public double calcularValorAPagar() {
+		
+		tipoVehiculo = "MOTO";
 		double tarifa;
 		if(tipoVehiculo.equals(MOTO)) {
 			tarifa = TARIFA_HORA_MOTO;
